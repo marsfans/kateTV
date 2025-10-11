@@ -12,6 +12,11 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // 允许访问主页，即使未认证
+  if (pathname === '/') {
+    return NextResponse.next();
+  }
+
   const storageType = process.env.NEXT_PUBLIC_STORAGE_TYPE || 'localstorage';
 
   if (!process.env.AUTH_PASSWORD) {
@@ -125,6 +130,8 @@ function shouldSkipAuth(pathname: string): boolean {
     '/icons/',
     '/logo.png',
     '/screenshot.png',
+    '/sw.js', // Service Worker
+    '/sw.js.map', // Service Worker source map
   ];
 
   return skipPaths.some((path) => pathname.startsWith(path));

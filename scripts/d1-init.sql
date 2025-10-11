@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS admin_configs (
 
 -- 插入默认管理员配置
 INSERT OR IGNORE INTO admin_configs (config_key, config_value, description) VALUES
-('site_name', 'KatelyaTV', '站点名称'),
+('site_name', 'KateTV', '站点名称'),
 ('site_description', '高性能影视播放平台', '站点描述'),
 ('enable_register', 'true', '是否允许用户注册'),
 ('max_users', '100', '最大用户数量'),

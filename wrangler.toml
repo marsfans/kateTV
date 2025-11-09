@@ -10,8 +10,8 @@ pages_build_output_dir = ".vercel/output/static"
 # database_id = "4117e6a9-47af-4b8a-8c43-6d0a371def5f"
 
 # 生产环境配置
-[env.production]
-name = "katelyatv"
+# [env.production]
+# name = "katelyatv"
 
 # 生产环境 D1 数据库配置
 # [[env.production.d1_databases]]
